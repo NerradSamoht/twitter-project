@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles.css">
+  <title>Twitter Project</title>
+</head>
+<body>
+
+  <button onclick="addNewMessage();">Add new message</button>
+  <button onclick="getMessages();">Display all messages</button>
+
+  <div id="messages">
+
+  <div data-type="1" class="message">
+    <textarea maxlength="140">no message</textarea>
+    <input class="datetime" type="datetime-local">
+    <select class="repeat">
+      <option value="" selected>not recurring</option>
+      <option value="daily">daily</option>
+      <option value="weekly">weekly</option>
+      <option value="monthly">monthly</option>
+    </select>
+    <button onclick="displayInfo(this);">set</button>
+    <p class="datetime-info">not set</p>
+    <button id="1" onclick="deleteMessage(this)">Delete</button>
+    <hr>
+  </div>
+
+  </div>
+
+	<fieldset>
+  		<legend>Filter messages</legend>
+  		<div>
+  			<label for="filter-from">from: </label>
+    		<input type="date" id="filter-from">
+  		</div>
+  		<div>
+    		<label for="filter-to">to: </label>
+    		<input type="date" id="filter-from">
+  		</div>
+		<button onclick="">Apply filter</button>
+
+		<div>
+			<input type="text" placeholder="search all messages">
+		</div>
+
+		<div>
+			<button>Today</button>
+			<button>Tomorrow</button>
+			<button>Daily</button>
+			<button>Weekly</button>
+			<button>Monthly</button>
+		</div>
+
+	</fieldset>
+
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAzIBiuH3lLdNGckBpmeS1AuvG7nz6fDiU",
+    authDomain: "tweets-79eac.firebaseapp.com",
+    databaseURL: "https://tweets-79eac.firebaseio.com",
+    projectId: "tweets-79eac",
+    storageBucket: "tweets-79eac.appspot.com",
+    messagingSenderId: "264412570831"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

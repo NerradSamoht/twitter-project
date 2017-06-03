@@ -1,0 +1,17 @@
+[
+	{
+		"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"datetime": "2017-06-16T13:30",
+		"recurring": "monthly"
+	},
+	{
+		"message": "Hello",
+		"datetime": "2017-05-16T13:30",
+		"recurring": "daily"
+	},
+	{
+		"message": "This is a short message.",
+		"datetime": "2017-05-16T13:30",
+		"recurring": "weekly"
+	}
+]
